@@ -50,6 +50,7 @@ public class LinkedList
 
     public void RemoveByKey(string key)
     {
+        if (_first == null) return;
         if (_first.Pair.Key == key) _first = _first.Next;
     }
 
@@ -66,7 +67,7 @@ public class LinkedList
 
     }
 
-    public LinkedListNode RecieveFirst()
+    public LinkedListNode ReceiveFirst()
     {
         return _first;
     }
