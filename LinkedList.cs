@@ -50,13 +50,25 @@ public class LinkedList
 
     public void RemoveByKey(string key)
     {
-        // remove pair with provided key
+        if (_first.Pair.Key == key) _first = _first.Next;
     }
 
-    /*public KeyValuePair GetItemWithKey(string key)
+    public KeyValuePair GetItemWithKey(string key)
     {
-        // get pair with provided key, return null if not found
+        LinkedListNode current = _first;
+        while (current != null)
+        {
+            if(current.Pair.Key == key) return current.Pair;
+            current = current.Next;
+        }
 
-    }*/
+        return null;
+
+    }
+
+    public LinkedListNode RecieveFirst()
+    {
+        return _first;
+    }
 }
 
